@@ -46,6 +46,7 @@ $(document).ready(function() {
 
     // Serialize the data in the form
     var serializedData = $form.serialize();
+    serializedData.username = serializedData.username.replace("@","");
 
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
