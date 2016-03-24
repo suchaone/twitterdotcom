@@ -7,7 +7,6 @@ $(document).ready(function() {
   function loadFeed(tweets) {
     $("#timeline").html("");
     $(tweets).each(function() {
-      console.log(this.gsx$tweet.$t);
       var $tweet = $("<li>");
       $tweet.append("<img class='avi' src='https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger'>");
       $tweet.append("<span class='username'>" + this.gsx$username.$t + "</span><br>");
@@ -40,7 +39,8 @@ $(document).ready(function() {
     var $form = $(this);
 
     $("input[name='timestamp']").val(new Date().getTime());
-    $("input[name='username']").val($("input[name='username']").val().replace("@",""));                                          
+    $("input[name='username']").val($("input[name='username']").val().replace("@",""));     
+    $("input[name='tweet']").val($("input[name='tweet']").val().substr(0,255)); 
 
 
     // Let's select and cache all the fields
