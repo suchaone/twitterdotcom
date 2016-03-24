@@ -1,0 +1,66 @@
+h1 {
+  text-align: center;
+}
+
+#publisher, #timeline {
+  border: 1px solid #e1e8ed;
+  padding: 10px 12px;
+  width: 588px;
+  font-size: 13px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin: 20px auto 0 auto;
+}
+
+#publisher {
+  background: #E8F4FB;
+}
+
+#timeline {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 1em;
+  padding: 0;
+}
+
+input[name="tweet"] {
+  width: 100%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+input[type="submit"] {
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.avi {
+  height: 48px;
+  width: 48px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  float: left;
+  margin-right: 12px; 
+}
+
+.username {
+  font-weight: bold;
+  color: #292f33;
+  line-height: 2em;
+}
+
+.username:before {
+  content: "@";
+}
+
+#timeline li {
+  padding: 12px;
+  border-bottom: 1px solid #e1e8ed;
+  clear: both;
+  list-style: none;
+  min-height: 75px
+}
