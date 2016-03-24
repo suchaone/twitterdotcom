@@ -40,6 +40,8 @@ $(document).ready(function() {
     var $form = $(this);
 
     $("input[name='timestamp']").val(new Date().getTime());
+    $("input[name='username']").val($("input[name='username']").val().replace("@",""));                                          
+
 
     // Let's select and cache all the fields
     var $inputs = $form.find("input, select, button, textarea");
