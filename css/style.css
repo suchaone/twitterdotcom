@@ -43,8 +43,9 @@ input[type="submit"] {
   width: 48px;
   border-radius: 5px;
   -moz-border-radius: 5px;
-  float: left;
-  margin-right: 12px; 
+  position: absolute;
+  top: 12px;
+  left: 12px;
 }
 
 .username {
@@ -58,9 +59,10 @@ input[type="submit"] {
 }
 
 #timeline li {
-  padding: 12px;
+  padding: 12px 12px 12px 75px;
   border-bottom: 1px solid #e1e8ed;
   clear: both;
   list-style: none;
   min-height: 75px
+  position: relative;
 }
