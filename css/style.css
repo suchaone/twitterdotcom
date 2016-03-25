@@ -5,7 +5,7 @@ h1 {
 #publisher, #timeline {
   border: 1px solid #e1e8ed;
   padding: 10px 12px;
-  width: 588px;
+  max-width: 588px;
   font-size: 13px;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -51,7 +51,14 @@ input[type="submit"] {
 .username {
   font-weight: bold;
   color: #292f33;
+  text-decoration: none;
+  cursor: pointer;
   line-height: 2em;
+}
+
+.username:hover {
+  text-decoration: none;
+  color: #337ab7;
 }
 
 .username:before {

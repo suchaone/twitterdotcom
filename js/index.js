@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(tweets).each(function() {
       var $tweet = $("<li>");
       $tweet.append("<img class='avi' src='https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger'>");
-      $tweet.append("<span class='username'>" + this.gsx$username.$t + "</span><br>");
+      $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a><br>");
       $tweet.append(this.gsx$tweet.$t);
       $("#timeline").prepend($tweet);
     });
