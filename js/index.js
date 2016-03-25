@@ -8,7 +8,10 @@ $(document).ready(function() {
     $("#timeline").html("");
     $(tweets).each(function() {
       var $tweet = $("<li>");
-      $tweet.append("<img class='avi' src='https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger'>");
+      var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
+      if (this.gsx$username.$t === "jokeocracy")
+        img = "images/jokeocracy.jpeg";
+      $tweet.append("<img class='avi' src='" + img + "'>");
       $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a><br>");
       $tweet.append(this.gsx$tweet.$t);
       $("#timeline").prepend($tweet);
