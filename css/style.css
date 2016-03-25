@@ -56,6 +56,18 @@ input[type="submit"] {
   line-height: 2em;
 }
 
+.username:after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/verified.png");
+  background-size: cover;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
 .username:hover {
   text-decoration: none;
   color: #337ab7;
