@@ -42,7 +42,10 @@ $(document).ready(function() {
     var $form = $(this);
 
     $("input[name='timestamp']").val(new Date().getTime());
-    $("input[name='username']").val($("input[name='username']").val().replace("@",""));     
+    $("input[name='username']").val($("input[name='username']").val().replace("@","").replace(" ",""));     
+    if ($("input[name='username']").val() === "") {
+      $("input[name='username']").val("anon");
+    }
     $("input[name='tweet']").val($("input[name='tweet']").val().substr(0,255)); 
 
 

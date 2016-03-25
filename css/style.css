@@ -72,4 +72,5 @@ input[type="submit"] {
   list-style: none;
   min-height: 75px;
   position: relative;
+  overflow: hidden;
 }
