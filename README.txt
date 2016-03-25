@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/anon/pen/RaVjRq.
-
- 
+it's like twitter but better
