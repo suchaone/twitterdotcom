@@ -9,8 +9,12 @@ $(document).ready(function() {
     $(tweets).each(function() {
       var $tweet = $("<li>");
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
+
       if (this.gsx$username.$t === "jokeocracy")
         img = "images/jokeocracy.jpeg";
+      else if (this.gsx$username.$t === "swarthyvillain")
+        img = "images/swarthyvillain.jpg";
+
       $tweet.append("<img class='avi' src='" + img + "'>");
       $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a><br>");
       $tweet.append(this.gsx$tweet.$t);
