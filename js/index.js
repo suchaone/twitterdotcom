@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
 
 
-    if ($("input[name='username']").val().length == 0 || $("input[name='tweet']").val().length) {
+    if ($("input[name='username']").val().length == 0 || $("input[name='tweet']").val().length == 0) {
       alert("there are two fields to fill out. not one, two.");
       return 0;
     }
