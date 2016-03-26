@@ -42,6 +42,13 @@ $(document).ready(function() {
     if (request) {
       request.abort();
     }
+
+
+    if ($("input[name='username']").val().length == 0 || $("input[name='tweet']").val().length) {
+      alert("there are two fields to fill out. not one, two.");
+      return 0;
+    }
+
     // setup some local variables
     var $form = $(this);
 
