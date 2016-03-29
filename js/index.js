@@ -129,7 +129,7 @@ $(document).ready(function() {
   $(document).on("click", ".retweet", function() {
     var username = $(this).parent().attr("class").split(" ")[0].replace("user-","");
     var text = encodeURI($(this).parent().attr("data-plain")).replace(/\%/g, "\%25"); 
-    var url = "https://twitter.com/intent/tweet?text=http://suchaone.github.io/tweet.html?" + username + "___" + text;
+    var url = "https://twitter.com/intent/tweet?text=http://suchaone.github.io/twitterdotcom/tweet.html?" + username + "___" + text;
     window.open(url);
   });
 
