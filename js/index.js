@@ -49,6 +49,11 @@ $(document).ready(function() {
       return 0;
     }
 
+    // robot scum
+    if ($("input[name='email']").val().length > 0) {
+      return 0;
+    }
+
     // setup some local variables
     var $form = $(this);
 
