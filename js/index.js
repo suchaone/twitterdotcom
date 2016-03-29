@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(tweets).each(function() {
       var $tweet = $("<li>");
       $tweet.addClass("user-" + this.gsx$username.$t.toLowerCase());
+      $tweet.attr("data-plain", this.gsx$tweet.$t);
 
       var mentionPattern = /\B@[a-z0-9_-]+/gi;
       var mentions = this.gsx$tweet.$t.match(mentionPattern);
@@ -29,9 +30,10 @@ $(document).ready(function() {
       else if (this.gsx$username.$t === "swarthyvillain")
         img = "images/swarthyvillain.jpg";
 
+      $tweet.append("<img class='retweet' src='images/retweet.png'>");
       $tweet.append("<img class='avi' src='" + img + "'>");
       $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a><br>");
-      $tweet.append(this.gsx$tweet.$t);
+      $tweet.append("<p class='text'>" + this.gsx$tweet.$t + "</p>");
       $("#timeline").prepend($tweet);
     });
   }
@@ -122,6 +124,13 @@ $(document).ready(function() {
 
     // Prevent default posting of form
     event.preventDefault();
+  });
+
+  $(document).on("click", ".retweet", function() {
+    var username = $(this).parent().attr("class").split(" ")[0].replace("user-","");
+    var text = encodeURI($(this).parent().attr("data-plain")).replace(/\%/g, "\%25"); 
+    var url = "https://twitter.com/intent/tweet?text=http://suchaone.github.io/tweet.html?" + username + "___" + text;
+    window.open(url);
   });
 
   $(document).on("click", ".avi", function() {

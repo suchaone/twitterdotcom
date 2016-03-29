@@ -1,3 +1,7 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 h1 {
   text-align: center;
 }
@@ -92,11 +96,76 @@ input[name="email"] {
 }
 
 #timeline li {
-  padding: 12px 12px 12px 75px;
+  padding: 12px 35px 12px 75px;
   border-bottom: 1px solid #e1e8ed;
   clear: both;
   list-style: none;
   min-height: 75px;
   position: relative;
   overflow: hidden;
+}
+
+.retweet {
+  width: 19px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.retweet:hover {
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+}
+
+.expanded {
+  background: rgba(0,0,0,0.55);
+}
+
+.expanded .container {
+  background: white;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin-top: 60px;
+  padding: 30px 40px;
+  max-width: 640px;
+  position: relative;
+}
+
+.expanded .tweet-body {
+  font-size: 26px;
+  color: #292f33;
+  line-height: 32px;
+  margin-top: 27px;
+  letter-spacing: .01em;
+  font-weight: 300;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.expanded .username {
+  font-weight: bold;
+  display: block;
+  padding-top: 2px;
+  margin-top: 3px;
+  font-size: 18px;
+  line-height: 1.25;
+  margin-left: 60px;
+  margin-top: 12px;
+}
+
+.expanded .avi {
+  top: 30px;
+  left: 40px;
+}
+
+.expanded .timestamp {
+  font-size: 13px;
+  color: #8899a6;
+  margin-top: 15px;
 }
