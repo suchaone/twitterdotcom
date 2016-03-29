@@ -8,6 +8,8 @@ $(document).ready(function() {
     $("#timeline").html("");
     $(tweets).each(function() {
       var $tweet = $("<li>");
+      $tweet.addClass("user-" + this.gsx$username.$t);
+
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
 
       if (this.gsx$username.$t === "jokeocracy")
@@ -108,5 +110,16 @@ $(document).ready(function() {
 
     // Prevent default posting of form
     event.preventDefault();
+  });
+
+  $(document).on("click", ".avi", function() {
+    var user = $(this).parent().attr("class");
+    if ($("#timeline").hasClass("profile")) {
+      $("li").show();
+      $("#timeline").removeClass("profile");
+    } else {
+      $("li:not(." + user + ")").hide();
+      $("#timeline").addClass("profile");
+    }
   });
 });
