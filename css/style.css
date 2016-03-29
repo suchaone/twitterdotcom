@@ -169,3 +169,18 @@ input[name="email"] {
   color: #8899a6;
   margin-top: 15px;
 }
+
+.back-to-timeline {
+  position: absolute;
+  top: -4px;
+  right: -36px;
+  font-size: 23px;
+  color: white;
+  opacity: .8;
+}
+
+.back-to-timeline:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
