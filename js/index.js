@@ -8,7 +8,15 @@ $(document).ready(function() {
     $("#timeline").html("");
     $(tweets).each(function() {
       var $tweet = $("<li>");
-      $tweet.addClass("user-" + this.gsx$username.$t);
+      $tweet.addClass("user-" + this.gsx$username.$t.toLowerCase());
+
+      var mentionPattern = /\B@[a-z0-9_-]+/gi;
+      var mentions = this.gsx$tweet.$t.match(mentionPattern);
+
+      $(mentions).each(function() {
+        $tweet.addClass("mention-" + this.replace("@",""));
+      });
+
 
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
 
@@ -113,12 +121,20 @@ $(document).ready(function() {
   });
 
   $(document).on("click", ".avi", function() {
-    var user = $(this).parent().attr("class");
+    var classes = $(this).parent().attr("class").split(" ");
+    var user = classes[0];
+
     if ($("#timeline").hasClass("profile")) {
       $("li").show();
       $("#timeline").removeClass("profile");
     } else {
-      $("li:not(." + user + ")").hide();
+      $("li").hide();
+      $("." + user).show();
+
+      $(classes).each(function() {
+        $(".user-" + (this + "").replace("mention-","")).show();
+      });
+      
       $("#timeline").addClass("profile");
     }
   });
