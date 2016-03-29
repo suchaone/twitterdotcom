@@ -1,14 +1,16 @@
 $(document).ready(function() {
   var args = location.search.replace("?","").replace(/%20/g," "); 
-  $(".username").html(args.split("___")[0]);
+  debugger;
+  var username = args.split("___")[0];
+  $(".username").html(username);
   $(".tweet-body").html(linkify(decodeURI(args.substr(args.indexOf("___") + 3, args.length))));
   $(".timestamp").html($(".timestamp").html() + " " + ((new Date()).getFullYear() + 1));
 
-  var img = "https://twitter.com/" + args[0] + "/profile_image?size=bigger";
+  var img = "https://twitter.com/" + username + "/profile_image?size=bigger";
 
-  if (args[0] === "jokeocracy")
+  if (username === "jokeocracy")
     img = "images/jokeocracy.jpeg";
-  else if (args[0] === "swarthyvillain")
+  else if (username === "swarthyvillain")
     img = "images/swarthyvillain.jpg";
 
   $(".avi").attr("src", img);
