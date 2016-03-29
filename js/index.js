@@ -17,6 +17,10 @@ $(document).ready(function() {
         $tweet.addClass("mention-" + this.replace("@",""));
       });
 
+      this.gsx$tweet.$t = this.gsx$tweet.$t.replace(mentionPattern, function(mention) {
+        return "@<a class='mention-link' href='#" + mention.replace("@","") + "'>" + mention.replace("@","") + "</a>"
+      });
+
 
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
 
@@ -122,6 +126,15 @@ $(document).ready(function() {
 
   $(document).on("click", ".avi", function() {
     var classes = $(this).parent().attr("class").split(" ");
+    showThread(classes);
+  });
+
+  $(document).on("click", ".mention-link", function() {
+    var classes = [$(this).parent().attr("class").split(" ")[0]].concat("mention-" + $(this).html().toLowerCase());
+    showThread(classes);
+  });
+
+  function showThread (classes) {
     var user = classes[0];
 
     if ($("#timeline").hasClass("profile")) {
@@ -132,10 +145,10 @@ $(document).ready(function() {
       $("." + user).show();
 
       $(classes).each(function() {
-        $(".user-" + (this + "").replace("mention-","")).show();
+        $(".user-" + (this.toLowerCase() + "").replace("mention-","")).show();
       });
       
       $("#timeline").addClass("profile");
     }
-  });
+  }
 });
