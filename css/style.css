@@ -124,7 +124,15 @@ input[name="email"] {
 }
 
 .expanded {
-  background: rgba(0,0,0,0.55);
+  background: black;
+}
+
+.twitter-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .55;
 }
 
 .expanded .container {
@@ -176,11 +184,9 @@ input[name="email"] {
   right: -36px;
   font-size: 23px;
   color: white;
-  opacity: .8;
 }
 
 .back-to-timeline:hover {
-  opacity: 1;
   text-decoration: none;
   color: white;
 }
