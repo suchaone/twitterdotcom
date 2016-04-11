@@ -135,6 +135,13 @@ $(document).ready(function() {
     window.open(url);
   });
 
+  $(document).on("click", "#timeline li", function() {
+    var username = $(this).attr("class").split(" ")[0].replace("user-","");
+    var text = encodeURI($(this).attr("data-plain")); 
+    var url = "http://suchaone.github.io/twitterdotcom/tweet.html?" + username + "___" + text;
+    window.open(url);
+  });
+
   $(document).on("click", ".avi", function() {
     var classes = $(this).parent().attr("class").split(" ");
     showThread(classes);
