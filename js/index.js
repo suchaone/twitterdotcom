@@ -142,12 +142,14 @@ $(document).ready(function() {
     window.open(url);
   });
 
-  $(document).on("click", ".avi", function() {
+  $(document).on("click", ".avi", function(e) {
+    e.stopPropagation();
     var classes = $(this).parent().attr("class").split(" ");
     showThread(classes);
   });
 
-  $(document).on("click", ".mention-link", function() {
+  $(document).on("click", ".mention-link", function(e) {
+    e.stopPropagation();
     var classes = [$(this).parent().attr("class").split(" ")[0]].concat("mention-" + $(this).html().toLowerCase());
     showThread(classes);
   });
