@@ -24,7 +24,6 @@ $(document).ready(function() {
         return "@<a class='mention-link' href='#" + mention.replace("@","") + "'>" + mention.replace("@","") + "</a>"
       });
 
-
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
 
       if (this.gsx$username.$t === "jokeocracy")
@@ -32,12 +31,30 @@ $(document).ready(function() {
       else if (this.gsx$username.$t === "swarthyvillain")
         img = "images/swarthyvillain.jpg";
 
+      var date = new Date(parseInt(this.gsx$timestamp.$t));
+
       $tweet.append("<img class='retweet' src='images/retweet.png'>");
       $tweet.append("<img class='avi' src='" + img + "'>");
-      $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a><br>");
+      $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a>");
+      $tweet.append("&nbsp;&nbsp;<span class='timestamp'>" + timeSince(date) + "</span>");
       $tweet.append("<p class='text'>" + this.gsx$tweet.$t + "</p>");
       $("#timeline").prepend($tweet);
     });
+  }
+
+  function timeSince(date) {
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    var seconds = Math.floor((new Date() - date) / 1000);
+    var interval = Math.floor(seconds / 43200);
+    if (interval > 1)
+      return months[date.getMonth()] + " " + date.getDate();
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1)
+      return interval + "h";
+    interval = Math.floor(seconds / 60);
+    if (interval > 1)
+      return interval + "m";
+    return Math.floor(seconds) + "s";
   }
 
   function loadTimeline() {

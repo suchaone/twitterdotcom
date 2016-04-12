@@ -105,6 +105,11 @@ input[name="email"] {
   content: "@";
 }
 
+.timestamp {
+  font-size: 13px;
+  color: #8899a6;
+}
+
 #timeline li {
   padding: 12px 35px 12px 75px;
   border-bottom: 1px solid #e1e8ed;
