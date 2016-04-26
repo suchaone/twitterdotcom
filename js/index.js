@@ -26,10 +26,12 @@ $(document).ready(function() {
 
       var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
 
-      if (this.gsx$username.$t === "jokeocracy")
+      if (this.gsx$username.$t.toLowerCase() === "jokeocracy")
         img = "images/jokeocracy.jpeg";
-      else if (this.gsx$username.$t === "swarthyvillain")
+      else if (this.gsx$username.$t.toLowerCase() === "swarthyvillain")
         img = "images/swarthyvillain.jpg";
+      else if (this.gsx$username.$t.toLowerCase() === "angeltilalove")
+        img = "images/tila.jpg";
 
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
