@@ -34,6 +34,8 @@ $(document).ready(function() {
         img = "images/tila.jpg";
       else if (this.gsx$username.$t.toLowerCase() === "thesublemon")
         img = "images/thesublemon.jpg";
+      else if (this.gsx$username.$t.toLowerCase() === "lumenphosphor")
+        img = "images/lumenphosphor.png";
 
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
