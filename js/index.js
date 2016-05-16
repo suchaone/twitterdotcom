@@ -36,6 +36,8 @@ $(document).ready(function() {
         img = "images/thesublemon.jpg";
       else if (this.gsx$username.$t.toLowerCase() === "lumenphosphor")
         img = "images/lumenphosphor.png";
+      else if (this.gsx$username.$t.toLowerCase() === "vesselofspirit" || this.gsx$username.$t.toLowerCase() === "secretofbeing" || this.gsx$username.$t.toLowerCase() === "cloneofsnow" || this.gsx$username.$t.toLowerCase() === "memberofspecies" || this.gsx$username.$t.toLowerCase() === "quantityofgood")
+        img = "images/sun.jpeg";
 
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
