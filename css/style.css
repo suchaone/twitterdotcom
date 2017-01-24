@@ -6,6 +6,27 @@ h1, h2 {
   text-align: center;
 }
 
+#header {
+  text-align: center;
+  font-size: 1.4em;
+  background: #333;
+}
+
+#header li {
+  display: inline-block;
+}
+
+#header a {
+  color: white;
+  padding: 1em;
+  display: block;
+}
+
+#header a:hover {
+  background: rgba(255,255,255,.1);
+  text-decoration: none;
+}
+
 #publisher, #timeline {
   border: 1px solid #e1e8ed;
   padding: 10px 12px;
