@@ -40,6 +40,14 @@ $(document).ready(function() {
         img = "images/nero.jpg";
       else if (this.gsx$username.$t.toLowerCase() === "vesselofspirit" || this.gsx$username.$t.toLowerCase() === "secretofbeing" || this.gsx$username.$t.toLowerCase() === "cloneofsnow" || this.gsx$username.$t.toLowerCase() === "memberofspecies" || this.gsx$username.$t.toLowerCase() === "quantityofgood")
         img = "images/sun.jpeg";
+      else if (this.gsx$username.$t.toLowerCase() === "menaquinone4")
+        img = "images/mena.jpg";
+      else if (this.gsx$username.$t.toLowerCase() === "kantbot2000")
+        img = "images/kantbot.jpg";
+      else if (this.gsx$username.$t.toLowerCase() === "paxdickinson")
+        img = "images/paxdickinson.jpg";
+      else if (this.gsx$username.$t.toLowerCase() === "TheViewFromHell")
+        img = "https://twitter.com/sarahdoingthing/profile_image?size=bigger";
 
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
