@@ -24,7 +24,7 @@ $(document).ready(function() {
         return "@<a class='mention-link' href='#" + mention.replace("@","") + "'>" + mention.replace("@","") + "</a>"
       });
 
-      var img = "https://twitter.com/" + this.gsx$username.$t + "/profile_image?size=bigger";
+      var img = "https://twivatar.glitch.me/" + this.gsx$username.$t;
 
       if (this.gsx$username.$t.toLowerCase() === "jokeocracy")
         img = "images/jokeocracy.jpeg";
@@ -47,7 +47,7 @@ $(document).ready(function() {
       else if (this.gsx$username.$t.toLowerCase() === "paxdickinson")
         img = "images/paxdickinson.jpg";
       else if (this.gsx$username.$t.toLowerCase() === "TheViewFromHell")
-        img = "https://twitter.com/sarahdoingthing/profile_image?size=bigger";
+        img = "https://twivatar.glitch.me/sarahdoingthing";
 
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
