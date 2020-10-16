@@ -52,7 +52,7 @@ $(document).ready(function() {
       var date = new Date(parseInt(this.gsx$timestamp.$t));
 
       $tweet.append("<img class='retweet' src='images/retweet.png'>");
-      $tweet.append("<img class='avi' src='images/" + this.gsx$username.$t.toLowerCase() + ".jpg' onerror='this.onerror = null; this.src='" + img + "'>");
+      $tweet.append("<img class='avi' src='images/" + this.gsx$username.$t.toLowerCase() + ".jpg' onerror='this.onerror = null; this.src=\"" + img + "\">");
       $tweet.append("<a target='_blank' class='username' href='https://twitter.com/" + this.gsx$username.$t + "'>" + this.gsx$username.$t + "</a>");
       $tweet.append("&nbsp;&nbsp;<span class='timestamp'>" + timeSince(date) + "</span>");
       $tweet.append("<p class='text'>" + this.gsx$tweet.$t + "</p>");
