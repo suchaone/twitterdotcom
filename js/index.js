@@ -24,7 +24,7 @@ $(document).ready(function() {
         return "@<a class='mention-link' href='#" + mention.replace("@","") + "'>" + mention.replace("@","") + "</a>"
       });
 
-      var img = "https://twivatar.glitch.me/" + this.gsx$username.$t;
+      var img = "https://unavatar.now.sh/twitter/" + this.gsx$username.$t;
 
       if (this.gsx$username.$t.toLowerCase() === "jokeocracy")
         img = "images/jokeocracy.jpeg";
