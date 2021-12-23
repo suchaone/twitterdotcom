@@ -77,7 +77,7 @@ $(document).ready(function() {
 
   function loadTimeline() {
     $.ajax({
-      url: "https://spreadsheets.google.com/feeds/list/1eTmadevM4H-DA47_kANt7mtSf2BwU-0yrIdkR4r7Yts/od6/public/values?alt=json-in-script&callback=DELETEME",
+      url: "https://www.googleapis.com/auth/spreadsheets/list/1eTmadevM4H-DA47_kANt7mtSf2BwU-0yrIdkR4r7Yts/od6/public/values?alt=json-in-script&callback=DELETEME",
       complete: function(data) {
         var x = data.responseText;
         x = x.replace("DELETEME(", "");
